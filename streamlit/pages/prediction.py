@@ -297,7 +297,7 @@ if soumettre:
         
         # Charger le modèle
         try:
-            model_path = os.path.join(os.path.dirname(__file__), 'model.pkl')
+            model_path = os.path.join(os.path.dirname(__file__), 'model')
             model = load_model(model_path)
             
             # Faire la prédiction

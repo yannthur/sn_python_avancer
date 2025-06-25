@@ -296,7 +296,7 @@ if soumettre:
         
         # Charger le modèle
         try:
-            model = load_model('/master/model/model')
+            model = load_model('model')
             
             # Faire la prédiction
             prediction = predict_model(model, data=data)

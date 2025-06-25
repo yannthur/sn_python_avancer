@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
 from pycaret.classification import load_model, predict_model
+import os
 
 # Configuration de la page
 st.set_page_config(
@@ -296,7 +297,8 @@ if soumettre:
         
         # Charger le modèle
         try:
-            model = load_model('pages/model')
+            model_path = os.path.join(os.path.dirname(__file__), 'model.pkl')
+            model = load_model(model_path)
             
             # Faire la prédiction
             prediction = predict_model(model, data=data)
